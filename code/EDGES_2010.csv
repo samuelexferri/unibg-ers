@@ -1,0 +1,202 @@
+Dep Airport Code;Arr Airport Code;Dep Airport Name;Dep IATA Country Code;Dep IATA Country Name;Arr Airport Name;Arr IATA Country Code;Arr IATA Country Name;Dep Region Code;Dep Region Name;Arr Region Code;Arr Region Name;Frequency;Seats Total
+AAE;LYS;Annaba;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;1296
+ALC;ORN;Alicante;ES;Spain;Oran Es Senia Apt;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;18;2592
+ALG;AMM;Algiers;DZ;Algeria;Amman Queen Alia International Apt;JO;Jordan;AF1;Africa : North Africa;ME1;Middle East;5;720
+ALG;ETZ;Algiers;DZ;Algeria;Metz/Nancy Lorraine;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;1124
+ALG;LOO;Algiers;DZ;Algeria;Laghouat;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+ALG;MXP;Algiers;DZ;Algeria;Milan Malpensa Apt;IT;Italy;AF1;Africa : North Africa;EU1;Europe : Western Europe;14;1414
+ALG;QSF;Algiers;DZ;Algeria;Setif;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;49;5340
+ALG;TGR;Algiers;DZ;Algeria;Touggourt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+ALG;TIN;Algiers;DZ;Algeria;Tindouf;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;10;1010
+ALG;YUL;Algiers;DZ;Algeria;Montreal Pierre Elliott Trudeau Int Apt;CA;Canada;AF1;Africa : North Africa;NA1;North America;9;2421
+AMM;ALG;Amman Queen Alia International Apt;JO;Jordan;Algiers;DZ;Algeria;ME1;Middle East;AF1;Africa : North Africa;5;720
+BJA;LYS;Bejaia;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;10;1010
+BSK;LYS;Biskra;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;4;576
+CZL;QSF;Constantine;DZ;Algeria;Setif;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;14;924
+ETZ;ALG;Metz/Nancy Lorraine;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;1124
+LOO;ALG;Laghouat;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+LYS;AAE;Lyon St-exupery Apt;FR;France;Annaba;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;1296
+LYS;BJA;Lyon St-exupery Apt;FR;France;Bejaia;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;10;1010
+LYS;BSK;Lyon St-exupery Apt;FR;France;Biskra;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;4;576
+MXP;ALG;Milan Malpensa Apt;IT;Italy;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;14;1414
+ORN;ALC;Oran Es Senia Apt;DZ;Algeria;Alicante;ES;Spain;AF1;Africa : North Africa;EU1;Europe : Western Europe;18;2592
+ORN;TLS;Oran Es Senia Apt;DZ;Algeria;Toulouse;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;1124
+QSF;ALG;Setif;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;63;5562
+TGR;ALG;Touggourt;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+TIN;ALG;Tindouf;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;909
+TLS;ORN;Toulouse;FR;France;Oran Es Senia Apt;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;1124
+YUL;ALG;Montreal Pierre Elliott Trudeau Int Apt;CA;Canada;Algiers;DZ;Algeria;NA1;North America;AF1;Africa : North Africa;9;2421
+AAE;ORN;Annaba;DZ;Algeria;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;906
+ALG;BCN;Algiers;DZ;Algeria;Barcelona Apt;ES;Spain;AF1;Africa : North Africa;EU1;Europe : Western Europe;18;1818
+ALG;CZL;Algiers;DZ;Algeria;Constantine;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;154;13460
+ALG;FCO;Algiers;DZ;Algeria;Rome Fiumicino Apt;IT;Italy;AF1;Africa : North Africa;EU1;Europe : Western Europe;13;1313
+ALG;GHA;Algiers;DZ;Algeria;Ghardaia;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;27;1782
+ALG;LIL;Algiers;DZ;Algeria;Lille Lesquin Airport;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;909
+ALG;OUA;Algiers;DZ;Algeria;Ouagadougou;BF;Burkina Faso;AF1;Africa : North Africa;AF3;Africa : Central/Western Africa;8;808
+ALG;PEK;Algiers;DZ;Algeria;Beijing Capital Intl Apt;CN;China;AF1;Africa : North Africa;AS4;Asia : North East Asia;9;2421
+ALG;SVO;Algiers;DZ;Algeria;Moscow Sheremetyevo International Apt;RU;Russian Federation;AF1;Africa : North Africa;EU2;Europe : Eastern/Central Europe;2;202
+ALG;TEE;Algiers;DZ;Algeria;Tbessa;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;13;858
+BCN;ALG;Barcelona Apt;ES;Spain;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;27;2727
+BSK;ORN;Biskra;DZ;Algeria;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+CZL;ALG;Constantine;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;145;13116
+FCO;ALG;Rome Fiumicino Apt;IT;Italy;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;13;1313
+GHA;ALG;Ghardaia;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;26;1716
+LIL;ALG;Lille Lesquin Airport;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;909
+OGX;VVZ;Ouargla;DZ;Algeria;Illizi;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;505
+ORN;AAE;Oran Es Senia Apt;DZ;Algeria;Annaba;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;906
+ORN;BSK;Oran Es Senia Apt;DZ;Algeria;Biskra;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+PEK;ALG;Beijing Capital Intl Apt;CN;China;Algiers;DZ;Algeria;AS4;Asia : North East Asia;AF1;Africa : North Africa;9;2421
+SVO;ALG;Moscow Sheremetyevo International Apt;RU;Russian Federation;Algiers;DZ;Algeria;EU2;Europe : Eastern/Central Europe;AF1;Africa : North Africa;2;202
+TEE;ALG;Tbessa;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;13;858
+VVZ;OGX;Illizi;DZ;Algeria;Ouargla;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;505
+ALG;BKO;Algiers;DZ;Algeria;Bamako;ML;Mali;AF1;Africa : North Africa;AF3;Africa : Central/Western Africa;9;909
+ALG;ELU;Algiers;DZ;Algeria;El Oued;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+ALG;IST;Algiers;DZ;Algeria;Istanbul Ataturk Airport;TR;Turkey;AF1;Africa : North Africa;EU1;Europe : Western Europe;14;2016
+ALG;MAD;Algiers;DZ;Algeria;Madrid Barajas Apt;ES;Spain;AF1;Africa : North Africa;EU1;Europe : Western Europe;13;1313
+ALG;NCE;Algiers;DZ;Algeria;Nice;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;909
+ALG;NKC;Algiers;DZ;Algeria;Nouakchott;MR;Mauritania;AF1;Africa : North Africa;AF3;Africa : Central/Western Africa;8;808
+BKO;ALG;Bamako;ML;Mali;Algiers;DZ;Algeria;AF3;Africa : Central/Western Africa;AF1;Africa : North Africa;9;909
+CZL;LYS;Constantine;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;10;1440
+ELU;ALG;El Oued;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+IST;ALG;Istanbul Ataturk Airport;TR;Turkey;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;14;2016
+LYS;CZL;Lyon St-exupery Apt;FR;France;Constantine;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;10;1440
+MAD;ALG;Madrid Barajas Apt;ES;Spain;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;13;1313
+NCE;ALG;Nice;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;909
+NKC;ALG;Nouakchott;MR;Mauritania;Algiers;DZ;Algeria;AF3;Africa : Central/Western Africa;AF1;Africa : North Africa;8;808
+ORN;BCN;Oran Es Senia Apt;DZ;Algeria;Barcelona Apt;ES;Spain;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;909
+ORY;QSF;Paris Orly Apt;FR;France;Setif;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;18;2592
+QSF;ORY;Setif;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;18;2592
+AAE;MRS;Annaba;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;13;1872
+ALG;ABJ;Algiers;DZ;Algeria;Abidjan;CI;Cote D'Ivoire;AF1;Africa : North Africa;AF3;Africa : Central/Western Africa;5;505
+ALG;BLJ;Algiers;DZ;Algeria;Batna;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;27;2627
+ALG;CBH;Algiers;DZ;Algeria;Bechar;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;8;808
+ALG;CDG;Algiers;DZ;Algeria;Paris Charles de Gaulle Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;31;8339
+ALG;CMN;Algiers;DZ;Algeria;Casablanca Mohammed V Apt;MA;Morocco;AF1;Africa : North Africa;AF1;Africa : North Africa;14;1414
+ALG;FRA;Algiers;DZ;Algeria;Frankfurt International Apt;DE;Germany;AF1;Africa : North Africa;EU1;Europe : Western Europe;17;1889
+ALG;LHR;Algiers;DZ;Algeria;London Heathrow Apt;GB;United Kingdom;AF1;Africa : North Africa;EU1;Europe : Western Europe;19;2736
+ALG;MRS;Algiers;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;27;5678
+ALG;ORN;Algiers;DZ;Algeria;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;191;19082
+ALG;TMR;Algiers;DZ;Algeria;Tamanrasset;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;28;3645
+BJA;MRS;Bejaia;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;4;404
+BJA;ORN;Bejaia;DZ;Algeria;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;734
+BLJ;ALG;Batna;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;26;2561
+BLJ;ORY;Batna;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;4;404
+CBH;ALG;Bechar;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;10;1225
+CDG;ALG;Paris Charles de Gaulle Apt;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;31;8339
+CMN;ALG;Casablanca Mohammed V Apt;MA;Morocco;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;14;1414
+CMN;ORN;Casablanca Mohammed V Apt;MA;Morocco;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;909
+CZL;ORY;Constantine;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;15;1515
+FRA;ALG;Frankfurt International Apt;DE;Germany;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;18;1990
+LHR;ALG;London Heathrow Apt;GB;United Kingdom;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;19;2736
+MRS;AAE;Marseille Provence Apt;FR;France;Annaba;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;13;1872
+MRS;ALG;Marseille Provence Apt;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;27;5678
+MRS;BJA;Marseille Provence Apt;FR;France;Bejaia;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;4;404
+MRS;ORN;Marseille Provence Apt;FR;France;Oran Es Senia Apt;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;18;2377
+ORN;ALG;Oran Es Senia Apt;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;192;18918
+ORN;BJA;Oran Es Senia Apt;DZ;Algeria;Bejaia;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;734
+ORN;CMN;Oran Es Senia Apt;DZ;Algeria;Casablanca Mohammed V Apt;MA;Morocco;AF1;Africa : North Africa;AF1;Africa : North Africa;9;909
+ORN;MRS;Oran Es Senia Apt;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;18;2377
+ORY;BLJ;Paris Orly Apt;FR;France;Batna;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;4;404
+ORY;CZL;Paris Orly Apt;FR;France;Constantine;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;15;1515
+TMR;ALG;Tamanrasset;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;18;2377
+ALG;BEY;Algiers;DZ;Algeria;Beirut;LB;Lebanon;AF1;Africa : North Africa;ME1;Middle East;13;1313
+ALG;DJG;Algiers;DZ;Algeria;Djanet;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;7;879
+ALG;HME;Algiers;DZ;Algeria;Hassi Messaoud;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;45;5104
+ALG;NIM;Algiers;DZ;Algeria;Niamey;NE;Niger;AF1;Africa : North Africa;AF3;Africa : Central/Western Africa;9;909
+ALG;TID;Algiers;DZ;Algeria;Tiaret;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;594
+BEY;ALG;Beirut;LB;Lebanon;Algiers;DZ;Algeria;ME1;Middle East;AF1;Africa : North Africa;13;1313
+BJA;ORY;Bejaia;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;18;2592
+BLJ;MRS;Batna;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;909
+BMW;TMX;Bordj Mokhtar;DZ;Algeria;Timimoun;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+CZL;MRS;Constantine;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;23;2495
+CZL;ORN;Constantine;DZ;Algeria;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;14;1626
+DJG;ALG;Djanet;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;16;2046
+HME;ALG;Hassi Messaoud;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;46;5033
+HME;IAM;Hassi Messaoud;DZ;Algeria;In Amenas;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;2;202
+IAM;HME;In Amenas;DZ;Algeria;Hassi Messaoud;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;2;202
+INZ;TMR;In Salah;DZ;Algeria;Tamanrasset;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+MRS;BLJ;Marseille Provence Apt;FR;France;Batna;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;1296
+MRS;CZL;Marseille Provence Apt;FR;France;Constantine;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;23;2495
+MZW;ORB;Mecheria;DZ;Algeria;Orebro;SE;Sweden;AF1;Africa : North Africa;EU1;Europe : Western Europe;5;330
+ORN;CZL;Oran Es Senia Apt;DZ;Algeria;Constantine;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;1296
+ORY;BJA;Paris Orly Apt;FR;France;Bejaia;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;18;2592
+TID;ALG;Tiaret;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;330
+TMR;INZ;Tamanrasset;DZ;Algeria;In Salah;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+TMX;BMW;Timimoun;DZ;Algeria;Bordj Mokhtar;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+ALG;BJA;Algiers;DZ;Algeria;Bejaia;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;26;2873
+ALG;BOD;Algiers;DZ;Algeria;Bordeaux Merignac Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;5;505
+ALG;CAI;Algiers;DZ;Algeria;Cairo;EG;Egypt;AF1;Africa : North Africa;AF1;Africa : North Africa;17;2448
+ALG;DKR;Algiers;DZ;Algeria;Dakar;SN;Senegal;AF1;Africa : North Africa;AF3;Africa : Central/Western Africa;9;909
+ALG;GVA;Algiers;DZ;Algeria;Geneva;CH;Switzerland;AF1;Africa : North Africa;EU1;Europe : Western Europe;13;1313
+ALG;LYS;Algiers;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;27;3567
+ALG;TMX;Algiers;DZ;Algeria;Timimoun;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;17;1262
+BJA;ALG;Bejaia;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;22;2609
+BLJ;LYS;Batna;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;5;505
+BOD;ALG;Bordeaux Merignac Apt;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;5;720
+CAI;ALG;Cairo;EG;Egypt;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;17;2448
+CFK;MRS;Chlef;DZ;Algeria;Marseille Provence Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;4;576
+DJG;FRA;Djanet;DZ;Algeria;Frankfurt International Apt;DE;Germany;AF1;Africa : North Africa;EU1;Europe : Western Europe;1;101
+DJG;OGX;Djanet;DZ;Algeria;Ouargla;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;3;303
+GVA;ALG;Geneva;CH;Switzerland;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;13;1313
+LYS;ALG;Lyon St-exupery Apt;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;27;3567
+LYS;BLJ;Lyon St-exupery Apt;FR;France;Batna;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;5;505
+MRS;CFK;Marseille Provence Apt;FR;France;Chlef;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;4;576
+OGX;DJG;Ouargla;DZ;Algeria;Djanet;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;2;202
+ORN;TID;Oran Es Senia Apt;DZ;Algeria;Tiaret;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;360
+TID;ORN;Tiaret;DZ;Algeria;Oran Es Senia Apt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;330
+TMX;ALG;Timimoun;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;17;1262
+AAE;ALG;Annaba;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;136;12751
+ALG;AAE;Algiers;DZ;Algeria;Annaba;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;141;13038
+ALG;BSK;Algiers;DZ;Algeria;Biskra;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;18;1890
+ALG;DAM;Algiers;DZ;Algeria;Damascus;SY;Syrian Arab Republic;AF1;Africa : North Africa;ME1;Middle East;13;1872
+ALG;DXB;Algiers;DZ;Algeria;Dubai International;AE;United Arab Emirates;AF1;Africa : North Africa;ME1;Middle East;13;3497
+ALG;IAM;Algiers;DZ;Algeria;In Amenas;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;1124
+ALG;INZ;Algiers;DZ;Algeria;In Salah;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+ALG;MZW;Algiers;DZ;Algeria;Mecheria;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+ALG;OGX;Algiers;DZ;Algeria;Ouargla;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;11;971
+BSK;ALG;Biskra;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;18;1890
+CBH;TIN;Bechar;DZ;Algeria;Tindouf;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;404
+CZL;MLH;Constantine;DZ;Algeria;Mulhouse;CH;Switzerland;AF1;Africa : North Africa;EU1;Europe : Western Europe;5;720
+DAM;ALG;Damascus;SY;Syrian Arab Republic;Algiers;DZ;Algeria;ME1;Middle East;AF1;Africa : North Africa;14;2016
+DJG;TMR;Djanet;DZ;Algeria;Tamanrasset;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;576
+DXB;ALG;Dubai International;AE;United Arab Emirates;Algiers;DZ;Algeria;ME1;Middle East;AF1;Africa : North Africa;13;3497
+ELU;TGR;El Oued;DZ;Algeria;Touggourt;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;8;528
+IAM;ALG;In Amenas;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;1124
+INZ;ALG;In Salah;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+LYS;QSF;Lyon St-exupery Apt;FR;France;Setif;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;17;2448
+MLH;CZL;Mulhouse;CH;Switzerland;Constantine;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;5;720
+MZW;ALG;Mecheria;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+OGX;ALG;Ouargla;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;12;1287
+QSF;LYS;Setif;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;17;2448
+TGR;ELU;Touggourt;DZ;Algeria;El Oued;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;8;528
+TIN;CBH;Tindouf;DZ;Algeria;Bechar;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;505
+TMR;DJG;Tamanrasset;DZ;Algeria;Djanet;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;22;2824
+AAE;ORY;Annaba;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;14;1586
+ALG;BRU;Algiers;DZ;Algeria;Brussels Airport;BE;Belgium;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;909
+ALG;GJL;Algiers;DZ;Algeria;Jijel;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;22;1452
+ALG;ORY;Algiers;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;77;15439
+ALG;TIP;Algiers;DZ;Algeria;Tripoli;LY;Libya;AF1;Africa : North Africa;AF1;Africa : North Africa;9;1124
+ALG;TLM;Algiers;DZ;Algeria;Tlemcen;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;23;2320
+ALG;TLS;Algiers;DZ;Algeria;Toulouse;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;1296
+ALG;TUN;Algiers;DZ;Algeria;Tunis;TN;Tunisia;AF1;Africa : North Africa;AF1;Africa : North Africa;27;3329
+BRU;ALG;Brussels Airport;BE;Belgium;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;909
+BSK;ORY;Biskra;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;5;720
+CZL;NCE;Constantine;DZ;Algeria;Nice;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;4;576
+GHA;VVZ;Ghardaia;DZ;Algeria;Illizi;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264
+GJL;ALG;Jijel;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;22;1452
+LYS;ORN;Lyon St-exupery Apt;FR;France;Oran Es Senia Apt;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;1296
+NCE;CZL;Nice;FR;France;Constantine;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;4;576
+ORN;LYS;Oran Es Senia Apt;DZ;Algeria;Lyon St-exupery Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;9;1296
+ORN;MZW;Oran Es Senia Apt;DZ;Algeria;Mecheria;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;5;330
+ORN;ORY;Oran Es Senia Apt;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;31;7235
+ORY;AAE;Paris Orly Apt;FR;France;Annaba;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;14;1586
+ORY;ALG;Paris Orly Apt;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;77;15314
+ORY;BSK;Paris Orly Apt;FR;France;Biskra;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;5;720
+ORY;ORN;Paris Orly Apt;FR;France;Oran Es Senia Apt;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;31;7235
+ORY;TLM;Paris Orly Apt;FR;France;Tlemcen;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;18;1818
+TIP;ALG;Tripoli;LY;Libya;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;9;1124
+TLM;ALG;Tlemcen;DZ;Algeria;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;22;2254
+TLM;ORY;Tlemcen;DZ;Algeria;Paris Orly Apt;FR;France;AF1;Africa : North Africa;EU1;Europe : Western Europe;18;1818
+TLS;ALG;Toulouse;FR;France;Algiers;DZ;Algeria;EU1;Europe : Western Europe;AF1;Africa : North Africa;9;1296
+TUN;ALG;Tunis;TN;Tunisia;Algiers;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;27;3329
+VVZ;GHA;Illizi;DZ;Algeria;Ghardaia;DZ;Algeria;AF1;Africa : North Africa;AF1;Africa : North Africa;4;264

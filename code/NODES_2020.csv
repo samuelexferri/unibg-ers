@@ -1,0 +1,74 @@
+Airport Code;Airport Name;IATA Country Code;IATA Country Name;Region Code;Region Name;Seats Total;Flights Total
+AAE;Annaba;DZ;Algeria;AF1;Africa : North Africa;54198;526
+ALG;Algiers;DZ;Algeria;AF1;Africa : North Africa;553636;4456
+AMM;Amman Queen Alia International Apt;JO;Jordan;ME1;Middle East;2592;18
+AZR;Adrar;DZ;Algeria;AF1;Africa : North Africa;17868;190
+BJA;Bejaia;DZ;Algeria;AF1;Africa : North Africa;20892;143
+BMW;Bordj Mokhtar;DZ;Algeria;AF1;Africa : North Africa;3564;54
+BSK;Biskra;DZ;Algeria;AF1;Africa : North Africa;11710;111
+CDG;Paris Charles de Gaulle Apt;FR;France;EU1;Europe : Western Europe;85942;530
+CZL;Constantine;DZ;Algeria;AF1;Africa : North Africa;92899;759
+BCN;Barcelona Apt;ES;Spain;EU1;Europe : Western Europe;17480;122
+BEY;Beirut;LB;Lebanon;ME1;Middle East;2912;26
+BLJ;Batna;DZ;Algeria;AF1;Africa : North Africa;8512;80
+CMN;Casablanca Mohammed V Apt;MA;Morocco;AF1;Africa : North Africa;18044;64
+DJG;Djanet;DZ;Algeria;AF1;Africa : North Africa;8580;72
+ELG;El Golea;DZ;Algeria;AF1;Africa : North Africa;1650;25
+HME;Hassi Messaoud;DZ;Algeria;AF1;Africa : North Africa;14256;169
+IAM;In Amenas;DZ;Algeria;AF1;Africa : North Africa;2784;32
+INZ;In Salah;DZ;Algeria;AF1;Africa : North Africa;2178;33
+JED;Jeddah;SA;Saudi Arabia;ME1;Middle East;34841;130
+MRS;Marseille Provence Apt;FR;France;EU1;Europe : Western Europe;55808;400
+NIM;Niamey;NE;Niger;AF3;Africa : Central/Western Africa;3924;27
+BKO;Bamako;ML;Mali;AF3;Africa : Central/Western Africa;5380;36
+ELU;El Oued;DZ;Algeria;AF1;Africa : North Africa;7904;96
+GHA;Ghardaia;DZ;Algeria;AF1;Africa : North Africa;10582;121
+IST;Istanbul Airport;TR;Turkey;EU1;Europe : Western Europe;28844;186
+LYS;Lyon St-exupery Apt;FR;France;EU1;Europe : Western Europe;41180;280
+MED;Madinah;SA;Saudi Arabia;ME1;Middle East;21235;79
+NCE;Nice;FR;France;EU1;Europe : Western Europe;7492;62
+NKC;Nouakchott;MR;Mauritania;AF3;Africa : Central/Western Africa;3628;26
+ORN;Oran Ahmed Ben Bella Apt;DZ;Algeria;AF1;Africa : North Africa;142928;1121
+ORY;Paris Orly Apt;FR;France;EU1;Europe : Western Europe;79492;478
+QSF;Setif;DZ;Algeria;AF1;Africa : North Africa;16356;106
+TLM;Tlemcen;DZ;Algeria;AF1;Africa : North Africa;16590;119
+TLS;Toulouse;FR;France;EU1;Europe : Western Europe;12880;96
+TMR;Tamanrasset;DZ;Algeria;AF1;Africa : North Africa;23176;181
+BOD;Bordeaux Merignac Apt;FR;France;EU1;Europe : Western Europe;5352;36
+CBH;Bechar;DZ;Algeria;AF1;Africa : North Africa;8540;96
+CFK;Chlef;DZ;Algeria;AF1;Africa : North Africa;5356;36
+CRL;Brussels S. Charleroi Airport;BE;Belgium;EU1;Europe : Western Europe;1632;16
+ALC;Alicante Airport;ES;Spain;EU1;Europe : Western Europe;16240;124
+ABJ;Abidjan;CI;Cote D'Ivoire;AF3;Africa : Central/Western Africa;3862;27
+FRA;Frankfurt International Apt;DE;Germany;EU1;Europe : Western Europe;4052;28
+LHR;London Heathrow Apt;GB;United Kingdom;EU1;Europe : Western Europe;6458;42
+LIL;Lille Lesquin Airport;FR;France;EU1;Europe : Western Europe;12180;90
+ETZ;Metz/Nancy Lorraine;FR;France;EU1;Europe : Western Europe;7092;46
+LIS;Lisbon;PT;Portugal;EU1;Europe : Western Europe;2168;18
+LOO;Laghouat;DZ;Algeria;AF1;Africa : North Africa;2244;34
+MXP;Milan Malpensa Apt;IT;Italy;EU1;Europe : Western Europe;2936;28
+TGR;Touggourt;DZ;Algeria;AF1;Africa : North Africa;2376;36
+TIN;Tindouf;DZ;Algeria;AF1;Africa : North Africa;12326;89
+YUL;Montreal Pierre Elliott Trudeau Int Apt;CA;Canada;NA1;North America;7664;28
+DXB;Dubai International;AE;United Arab Emirates;ME1;Middle East;9036;36
+MLH;Mulhouse;CH;Switzerland;EU1;Europe : Western Europe;6128;44
+OGX;Ouargla;DZ;Algeria;AF1;Africa : North Africa;18753;190
+VVZ;Illizi;DZ;Algeria;AF1;Africa : North Africa;4684;54
+FCO;Rome Fiumicino Apt;IT;Italy;EU1;Europe : Western Europe;3468;34
+MPL;Montpellier Mediterranee Apt;FR;France;EU1;Europe : Western Europe;6152;42
+OUA;Ouagadougou;BF;Burkina Faso;AF3;Africa : Central/Western Africa;3906;27
+PEK;Beijing Capital Intl Apt;CN;China;AS4;Asia : North East Asia;4518;18
+SVO;Moscow Sheremetyevo International Apt;RU;Russian Federation;EU2;Europe : Eastern/Central Europe;918;9
+MAD;Madrid Adolfo Suarez-Barajas Apt;ES;Spain;EU1;Europe : Western Europe;6304;44
+VIE;Vienna International;AT;Austria;EU1;Europe : Western Europe;4032;36
+BRU;Brussels Airport;BE;Belgium;EU1;Europe : Western Europe;4120;28
+CAI;Cairo International;EG;Egypt;AF1;Africa : North Africa;4172;28
+DSS;Dakar Blaise Diagne International;SN;Senegal;AF3;Africa : Central/Western Africa;6524;44
+BUD;Budapest;HU;Hungary;EU2;Europe : Eastern/Central Europe;2016;18
+GVA;Geneva;CH;Switzerland;EU1;Europe : Western Europe;4960;36
+GJL;Jijel;DZ;Algeria;AF1;Africa : North Africa;8184;124
+INF;In Guezzam;DZ;Algeria;AF1;Africa : North Africa;660;10
+PMI;Palma de Mallorca;ES;Spain;EU1;Europe : Western Europe;1188;18
+TMX;Timimoun;DZ;Algeria;AF1;Africa : North Africa;4164;54
+TUN;Tunis;TN;Tunisia;AF1;Africa : North Africa;11974;90
+TEE;Tebessa;DZ;Algeria;AF1;Africa : North Africa;4092;62
