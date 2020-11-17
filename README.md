@@ -15,6 +15,7 @@ Economics of Network and Service Industries project
 -   **Samuele Ferri**: [Site](https://samuelexferri.com), [GitHub](https://github.com/samuelexferri)
 -   **Marco Abbadini**
 -   **Simone Sudati**
+-   **Xhensila Hima**
 
 ## Version
 
