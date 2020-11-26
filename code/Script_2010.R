@@ -3,34 +3,34 @@
 #############################################################################################################################################
 
 ############################
-####### DATASET 2020 #######
+####### DATASET 2010 #######
 ############################
 
-# Importo file nodes2020
+# Importo file nodes2010
 ## Windows
-nodes2020 <- read.csv(file="C:/GitHub/unibg-ers/code/NODES_2020.csv", sep= ";", fileEncoding="UTF-8-BOM")
-nodes2020
+nodes2010 <- read.csv(file="C:/GitHub/unibg-ers/code/NODES_2010.csv", sep= ";", fileEncoding="UTF-8-BOM")
+nodes2010
 
-# Importo file edges2020
+# Importo file edges2010
 ## Windows
-edges2020 <- read.csv(file="C:/GitHub/unibg-ers/code/EDGES_2020.csv", sep= ";", fileEncoding="UTF-8-BOM")
-edges2020
+edges2010 <- read.csv(file="C:/GitHub/unibg-ers/code/EDGES_2010.csv", sep= ";", fileEncoding="UTF-8-BOM")
+edges2010
 
 # ZOOM
 library(zoom)
 #zm()# Chiamare solo dopo aver plottato, per uscire cliccare 'q' sulla figura
 
 # Esamino i dati
-head(nodes2020) 
-head(edges2020) 
-nrow(nodes2020) # 73
-length(unique(nodes2020$Airport.Code)) # Tutti i nodi sono unici
-nrow(edges2020) # 329
-nrow(unique(edges2020[,c("Dep.Airport.Code","Arr.Airport.Code")])) # Tutte le tratte sono uniche
+head(nodes2010) 
+head(edges2010) 
+nrow(nodes2010) # 67
+length(unique(nodes2010$Airport.Code)) # Tutti i nodi sono unici
+nrow(edges2010) # 201
+nrow(unique(edges2010[,c("Dep.Airport.Code","Arr.Airport.Code")])) # Tutte le tratte sono uniche
 
 ### Rappresenazione grafica
 library(igraph)
-net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
+net<-graph_from_data_frame(d=edges2010,vertices=nodes2010,directed=T)
 class(net)
 as_edgelist(net,names=T)
 # Attenzione per network grandi può far saltare il programma as_adjacency_matrix(net,attr="weight")
@@ -50,7 +50,7 @@ plot(net,edge.arrow.size=.4,vertex.size=.9,edge.curved=.1,vertex.label.cex=.3)
 plot(net,edge.arrow.size=.2,edge.curved=0,vertex.color="orange",vertex.frame.color="#555555",vertex.label=V(net)$name,vertex.size=4.9,vertex.label.color="black",vertex.label.cex=.5)
 
 #### Genero colore in base al Region.Code
-unique(nodes2020[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
+unique(nodes2010[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
 #V(net)$type <- 404
 V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
 V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
@@ -86,18 +86,18 @@ plot(net,vertex.label.cex=.45)
 legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 #### Snellire il network (cut-off di voli con pochi passeggeri)
-head(edges2020)
-hist(edges2020$Seats.Total,30,xlab="Passeggeri totali di tutti i voli su quella tratta", ylab="Numero di tratte") # Seats Total
-hist(edges2020$Frequency,30,xlab="Numero di voli su quella tratta", ylab="Numero di tratte") # Frequency Total
-hist(edges2020$Seats.Total/edges2020$Frequency,30,xlab="Passeggeri medi su quella tratta", ylab="Numero di tratte")
-mean(edges2020$Seats.Total) # Media 2511.198
-sd(edges2020$Seats.Total) # Standard Deviation 3513.872
-cut.off<-mean(edges2020$Seats.Total)
+head(edges2010)
+hist(edges2010$Seats.Total,30,xlab="Passeggeri totali di tutti i voli su quella tratta", ylab="Numero di tratte") # Seats Total
+hist(edges2010$Frequency,30,xlab="Numero di voli su quella tratta", ylab="Numero di tratte") # Frequency Total
+hist(edges2010$Seats.Total/edges2010$Frequency,30,xlab="Passeggeri medi su quella tratta", ylab="Numero di tratte")
+mean(edges2010$Seats.Total) # Media 2093.368
+sd(edges2010$Seats.Total) # Standard Deviation 3048.608
+cut.off<-mean(edges2010$Seats.Total)
 net.sp<-delete_edges(net,E(net)[Seats.Total<cut.off])
 plot(net.sp,edge.color="orange",vertex.color="gray50",vertex.label.cex=.45)
 
 #### Separare i due tipi di link in base alla regione dell'aeroporto di destinazione
-net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
+net<-graph_from_data_frame(d=edges2010,vertices=nodes2010,directed=T)
 E(net)$width<-2.0
 #V(net)$label<-NA
 net_africa <- net - E(net)[E(net)$Arr.Region.Code=="EU1" | E(net)$Arr.Region.Code=="EU2" | E(net)$Arr.Region.Code=="NA1" | E(net)$Arr.Region.Code=="AS4"]
@@ -185,32 +185,32 @@ xlim <- c(-18.938281, +41.601563)
 ylim <- c(15.039321, 60.856229)
 
 map("world", col="grey90", fill=TRUE, bg="white", lwd=0.25, xlim=xlim, ylim=ylim)
-title("Diametro della rete (2020)")
+title("Diametro della rete (2010)")
 mtext(text = "", side = 4, line = -1, adj = 0.01, cex = 0.8)
 
 # Coordinate aeroporti del diametro
-lat_BMW <- 21.371585
-lon_BMW <- 0.923955
-lat_AZR <- 27.841194
-lon_AZR <- -0.188132
+lat_VVZ <- 26.719086
+lon_VVZ <- 8.618057
+lat_GHA <- 32.378680
+lon_GHA <- 3.801525
 lat_ALG <- 36.697961
 lon_ALG <- 3.206887
-lat_CDG <- 49.013853
-lon_CDG <- 2.542437
-lat_CFK <- 36.217643
-lon_CFK <- 1.324707
+lat_ORN <- 35.620143
+lon_ORN <- -0.606154
+lat_ALC <- 38.285534
+lon_ALC <- -0.560163
 
-inter2 <- gcIntermediate(c(lon_BMW, lat_BMW), c(lon_AZR, lat_AZR), n=50, addStartEnd=TRUE)
+inter2 <- gcIntermediate(c(lon_VVZ, lat_VVZ), c(lon_GHA, lat_GHA), n=50, addStartEnd=TRUE)
 lines(inter2, col="red", lwd=1.5)
-inter3 <- gcIntermediate(c(lon_AZR, lat_AZR),c(lon_ALG, lat_ALG), n=50, addStartEnd=TRUE)
+inter3 <- gcIntermediate(c(lon_GHA, lat_GHA),c(lon_ALG, lat_ALG), n=50, addStartEnd=TRUE)
 lines(inter3, col="red", lwd=1.5)
-inter4 <- gcIntermediate(c(lon_ALG, lat_ALG),c(lon_CDG, lat_CDG), n=50, addStartEnd=TRUE)
+inter4 <- gcIntermediate(c(lon_ALG, lat_ALG),c(lon_ORN, lat_ORN), n=50, addStartEnd=TRUE)
 lines(inter4, col="red", lwd=1.5)
-inter5 <- gcIntermediate(c(lon_CDG, lat_CDG),c(lon_CFK, lat_CFK), n=50, addStartEnd=TRUE)
+inter5 <- gcIntermediate(c(lon_ORN, lat_ORN),c(lon_ALC, lat_ALC), n=50, addStartEnd=TRUE)
 lines(inter5, col="red", lwd=1.5)
 
-text((lon_BMW+0.6), (lat_BMW+0.6),"BMW", col="black",cex = .8,font=2)
-text((lon_AZR+0.6), (lat_AZR+0.6),"AZR", col="black",cex = .8,font=2)
+text((lon_VVZ+0.6), (lat_VVZ+0.6),"VVZ", col="black",cex = .8,font=2)
+text((lon_GHA+0.6), (lat_GHA+0.6),"GHA", col="black",cex = .8,font=2)
 text((lon_ALG+0.8), (lat_ALG+0.6),"ALG", col="black",cex = .8,font=2)
-text((lon_CDG+0.6), (lat_CDG+0.6),"CDG", col="black",cex = .8,font=2)
-text((lon_CFK-0.6), (lat_CFK-0.6),"CFK", col="black",cex = .8,font=2)
+text((lon_ORN+0.6), (lat_ORN+0.6),"ORN", col="black",cex = .8,font=2)
+text((lon_ALC-0.6), (lat_ALC-0.6),"ALC", col="black",cex = .8,font=2)
