@@ -87,9 +87,9 @@ legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","
 
 #### Snellire il network (cut-off di voli con pochi passeggeri)
 head(edges2020)
-hist(edges2020$Seats.Total,30,xlab="Passeggeri totali di tutti i voli su quella tratta", ylab="Numero di tratte") # Seats Total
-hist(edges2020$Frequency,30,xlab="Numero di voli su quella tratta", ylab="Numero di tratte") # Frequency Total
-hist(edges2020$Seats.Total/edges2020$Frequency,30,xlab="Passeggeri medi su quella tratta", ylab="Numero di tratte")
+hist(edges2020$Seats.Total,30, xlab="Passeggeri totali", ylab="Numero di tratte", main="Istrogramma dei passeggeri totali per tratta") # Seats Total
+hist(edges2020$Frequency,30, xlab="Numero di voli", ylab="Numero di tratte", main="Isogramma della frequenza dei voli") # Frequency Total
+hist(edges2020$Seats.Total/edges2020$Frequency,30, xlab="Passeggeri medi", ylab="Numero di tratte", main="Istogramma dei passeggeri medi")
 mean(edges2020$Seats.Total) # Media 2511.198
 sd(edges2020$Seats.Total) # Standard Deviation 3513.872
 cut.off<-mean(edges2020$Seats.Total)
@@ -153,6 +153,9 @@ deg<-degree(net,mode="all")
 plot(net, vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2)
 deg.dist <- degree_distribution(net, cumulative=T, mode="all")
 plot(x=0:max(deg), y=1-deg.dist, pch=19, cex=1.2, col="orange", xlab="Degree", ylab="Cumulative Frequency")
+# Centralità e centralizzazione
+degree(net, mode="in") # Si considerano solo i link che arrivano a uno scalo
+centr_degree(net, mode="in", normalized=T) # Centalizzazione considerando la "in degree"
 
 # Closeness (centrality based on distance to others in the graph) - Inverse of the node’s average geodesic distance to others in the network
 closeness(net, mode="all", weights=NA)
@@ -162,10 +165,6 @@ centr_clo(net, mode="all", normalized=T)
 betweenness(net, directed=T, weights=NA)
 edge_betweenness(net, directed=T, weights=NA)
 centr_betw(net, directed=T, normalized=T)
-
-## Centralità e centralizzazione
-degree(net, mode="in") # Si considerano solo i link che arrivano a uno scalo
-centr_degree(net, mode="in", normalized=T) # Centalizzazione considerando la "in degree"
 
 ## Distanza e paths
 # Average path length - The mean of the shortest distance between each pair of nodes in the network (#in both directions for directed graphs)
