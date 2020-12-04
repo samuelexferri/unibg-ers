@@ -62,12 +62,12 @@ V(net)$type[V(net)$Region.Code=="AS4"] <- 7 # North East Asia
 V(net)$type
 colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
 V(net)$color<-colrs[V(net)$type]
-plot(net,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.size=4.9,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white")
+plot(net,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.size=10,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white")
 legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 #### Setto la taglia dei nodi in base a size (es. dimensione aeroporto per seats totali nel network)
 #V(net)$size<-V(net)$Seats.Total*0.1
-V(net)$size<-0.5*(log(V(net)$Seats.Total)+1)
+V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
 #V(net)$size<-V(net)$Seats.Total*0.5
 
 #### Tolgo i label
@@ -87,14 +87,34 @@ legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","
 
 #### Snellire il network (cut-off di voli con pochi passeggeri)
 head(edges2020)
-hist(edges2020$Seats.Total,30, xlab="Passeggeri totali", ylab="Numero di tratte", main="Istrogramma dei passeggeri totali per tratta") # Seats Total
-hist(edges2020$Frequency,30, xlab="Numero di voli", ylab="Numero di tratte", main="Isogramma della frequenza dei voli") # Frequency Total
-hist(edges2020$Seats.Total/edges2020$Frequency,30, xlab="Passeggeri medi", ylab="Numero di tratte", main="Istogramma dei passeggeri medi")
+hist(edges2010$Seats.Total,30, col=c("lightskyblue1"), xlab="Passeggeri totali", ylab="Numero di tratte", main="Istrogramma dei passeggeri totali per tratta") # Seats Total
+hist(edges2010$Frequency,30, col=c("lightskyblue1"), xlab="Numero di voli", ylab="Numero di tratte", main="Isogramma della frequenza dei voli") # Frequency Total
+hist(edges2010$Seats.Total/edges2020$Frequency,30, col=c("lightskyblue1"), xlab="Passeggeri medi", ylab="Numero di tratte", main="Istogramma dei passeggeri medi")
 mean(edges2020$Seats.Total) # Media 2511.198
 sd(edges2020$Seats.Total) # Standard Deviation 3513.872
 cut.off<-mean(edges2020$Seats.Total)
 net.sp<-delete_edges(net,E(net)[Seats.Total<cut.off])
-plot(net.sp,edge.color="orange",vertex.color="gray50",vertex.label.cex=.45)
+plot(net.sp,edge.color="lightskyblue1",vertex.color="gray50",vertex.label.cex=.45)
+
+####Snellire il network (cut-off di voli con pochi passeggeri)
+#### Genero colore in base al Region.Code
+unique(nodes2010[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
+#V(net)$type <- 404
+V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
+V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
+V(net)$type[V(net)$Region.Code=="ME1"] <- 3 # Middle East
+V(net)$type[V(net)$Region.Code=="EU1"] <- 4 # Western Europe
+V(net)$type[V(net)$Region.Code=="EU2"] <- 5 # Eastern/Central Europe
+V(net)$type[V(net)$Region.Code=="NA1"] <- 6 # North America
+V(net)$type[V(net)$Region.Code=="AS4"] <- 7 # North East Asia
+V(net)$type
+colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
+V(net)$color<-colrs[V(net)$type]
+V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
+cut.off<-mean(edges2010$Seats.Total)
+net.sp<-delete_edges(net,E(net)[Seats.Total<cut.off])
+plot(net.sp,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white")
+legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 #### Separare i due tipi di link in base alla regione dell'aeroporto di destinazione
 net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
@@ -104,7 +124,7 @@ net_africa <- net - E(net)[E(net)$Arr.Region.Code=="EU1" | E(net)$Arr.Region.Cod
 net_extra_africa <- net - E(net)[E(net)$Arr.Region.Code=="AF1" | E(net)$Arr.Region.Code=="AF2" | E(net)$Arr.Region.Code=="ME1"]
 par(mfrow=c(1,2))
 plot(net_africa,vertex.color="orange",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Africa")
-plot(net_extra_africa,vertex.color="lightsteelblue2",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Extra Africa")
+plot(net_extra_africa,vertex.color="lightskyblue1",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Extra Africa")
 
 #############################################################################################################################################
 
@@ -150,9 +170,9 @@ plot(net, vertex.color=vcol, vertex.size=10, vertex.label.cex=.5, edge.curved=.1
 ## Gradi dei nodi
 # Degree centrality è il numero di connessioni dirette rispetto al potenziale numero di connessioni dirette, misura l'importanza di un vertice in base al numero di connessioni del vertice
 deg<-degree(net,mode="all")
-plot(net, vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2)
+plot(net, vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2, vertex.color="lightskyblue1")
 deg.dist <- degree_distribution(net, cumulative=T, mode="all")
-plot(x=0:max(deg), y=1-deg.dist, pch=19, cex=1.2, col="orange", xlab="Degree", ylab="Cumulative Frequency")
+plot(x=0:max(deg), y=1-deg.dist, pch=19, cex=1.2, col="lightskyblue1", xlab="Degree", ylab="Cumulative Frequency", type="s", lwd=5)
 # Centralità e centralizzazione
 degree(net, mode="in") # Si considerano solo i link che arrivano a uno scalo
 centr_degree(net, mode="in", normalized=T) # Centalizzazione considerando la "in degree"
@@ -200,13 +220,13 @@ lat_CFK <- 36.217643
 lon_CFK <- 1.324707
 
 inter2 <- gcIntermediate(c(lon_BMW, lat_BMW), c(lon_AZR, lat_AZR), n=50, addStartEnd=TRUE)
-lines(inter2, col="red", lwd=1.5)
+lines(inter2, col="red", lwd=5)
 inter3 <- gcIntermediate(c(lon_AZR, lat_AZR),c(lon_ALG, lat_ALG), n=50, addStartEnd=TRUE)
-lines(inter3, col="red", lwd=1.5)
+lines(inter3, col="red", lwd=5)
 inter4 <- gcIntermediate(c(lon_ALG, lat_ALG),c(lon_CDG, lat_CDG), n=50, addStartEnd=TRUE)
-lines(inter4, col="red", lwd=1.5)
+lines(inter4, col="red", lwd=5)
 inter5 <- gcIntermediate(c(lon_CDG, lat_CDG),c(lon_CFK, lat_CFK), n=50, addStartEnd=TRUE)
-lines(inter5, col="red", lwd=1.5)
+lines(inter5, col="red", lwd=5)
 
 text((lon_BMW+0.6), (lat_BMW+0.6),"BMW", col="black",cex = .8,font=2)
 text((lon_AZR+0.6), (lat_AZR+0.6),"AZR", col="black",cex = .8,font=2)

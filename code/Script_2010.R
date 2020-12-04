@@ -124,7 +124,7 @@ net_africa <- net - E(net)[E(net)$Arr.Region.Code=="EU1" | E(net)$Arr.Region.Cod
 net_extra_africa <- net - E(net)[E(net)$Arr.Region.Code=="AF1" | E(net)$Arr.Region.Code=="AF2" | E(net)$Arr.Region.Code=="ME1"]
 par(mfrow=c(1,2))
 plot(net_africa,vertex.color="orange",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Africa")
-plot(net_extra_africa,vertex.color="lightsteelblue2",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Extra Africa")
+plot(net_extra_africa,vertex.color="lightskyblue1",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Extra Africa")
 
 #############################################################################################################################################
 
@@ -170,7 +170,7 @@ plot(net, vertex.color=vcol, vertex.size=10, vertex.label.cex=.5, edge.curved=.1
 ## Gradi dei nodi
 # Degree centrality è il numero di connessioni dirette rispetto al potenziale numero di connessioni dirette, misura l'importanza di un vertice in base al numero di connessioni del vertice
 deg<-degree(net,mode="all")
-plot(net, vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2)
+plot(net, vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2, vertex.color="orange")
 deg.dist <- degree_distribution(net, cumulative=T, mode="all")
 plot(x=0:max(deg), y=1-deg.dist, pch=19, cex=1.2, col="orange", xlab="Degree", ylab="Cumulative Frequency", type="s", lwd=5)
 # Centralità e centralizzazione
