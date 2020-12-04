@@ -87,9 +87,9 @@ legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","
 
 #### Snellire il network (cut-off di voli con pochi passeggeri)
 head(edges2020)
-hist(edges2010$Seats.Total,30, col=c("lightskyblue1"), xlab="Passeggeri totali", ylab="Numero di tratte", main="Istrogramma dei passeggeri totali per tratta") # Seats Total
-hist(edges2010$Frequency,30, col=c("lightskyblue1"), xlab="Numero di voli", ylab="Numero di tratte", main="Isogramma della frequenza dei voli") # Frequency Total
-hist(edges2010$Seats.Total/edges2020$Frequency,30, col=c("lightskyblue1"), xlab="Passeggeri medi", ylab="Numero di tratte", main="Istogramma dei passeggeri medi")
+hist(edges2020$Seats.Total,30, col=c("lightskyblue1"), xlab="Passeggeri totali", ylab="Numero di tratte", main="Istrogramma dei passeggeri totali per tratta") # Seats Total
+hist(edges2020$Frequency,30, col=c("lightskyblue1"), xlab="Numero di voli", ylab="Numero di tratte", main="Isogramma della frequenza dei voli") # Frequency Total
+hist(edges2020$Seats.Total/edges2020$Frequency,30, col=c("lightskyblue1"), xlab="Passeggeri medi", ylab="Numero di tratte", main="Istogramma dei passeggeri medi")
 mean(edges2020$Seats.Total) # Media 2511.198
 sd(edges2020$Seats.Total) # Standard Deviation 3513.872
 cut.off<-mean(edges2020$Seats.Total)
@@ -98,7 +98,7 @@ plot(net.sp,edge.color="lightskyblue1",vertex.color="gray50",vertex.label.cex=.4
 
 ####Snellire il network (cut-off di voli con pochi passeggeri)
 #### Genero colore in base al Region.Code
-unique(nodes2010[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
+unique(nodes2020[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
 #V(net)$type <- 404
 V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
 V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
@@ -111,7 +111,7 @@ V(net)$type
 colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
 V(net)$color<-colrs[V(net)$type]
 V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
-cut.off<-mean(edges2010$Seats.Total)
+cut.off<-mean(edges2020$Seats.Total)
 net.sp<-delete_edges(net,E(net)[Seats.Total<cut.off])
 plot(net.sp,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white")
 legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
