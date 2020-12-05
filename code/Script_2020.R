@@ -50,7 +50,7 @@ plot(net,edge.arrow.size=.4,vertex.size=.9,edge.curved=.1,vertex.label.cex=.3)
 plot(net,edge.arrow.size=.2,edge.curved=0,vertex.color="orange",vertex.frame.color="#555555",vertex.label=V(net)$name,vertex.size=4.9,vertex.label.color="black",vertex.label.cex=.5)
 
 #### Genero colore in base al Region.Code
-unique(nodes2020[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
+unique(nodes2020[,c("Region.Code")]) # Region.Code unici: "AF1" "AF3" "ME1" "EU1" "EU2" "NA1" "AS4"
 #V(net)$type <- 404
 V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
 V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
@@ -96,9 +96,9 @@ cut.off<-mean(edges2020$Seats.Total)
 net.sp<-delete_edges(net,E(net)[Seats.Total<cut.off])
 plot(net.sp,edge.color="lightskyblue1",vertex.color="gray50",vertex.label.cex=.45)
 
-####Snellire il network (cut-off di voli con pochi passeggeri)
+#### Snellire il network (cut-off di voli con pochi passeggeri)
 #### Genero colore in base al Region.Code
-unique(nodes2020[,c("Region.Code")]) # Region.Code unici: "AF1" "ME1" "EU1" "AF3" "NA1" "AS4" "EU2"
+unique(nodes2020[,c("Region.Code")]) # Region.Code unici: "AF1" "AF3" "ME1" "EU1" "EU2" "NA1" "AS4"
 #V(net)$type <- 404
 V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
 V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
@@ -125,6 +125,87 @@ net_extra_africa <- net - E(net)[E(net)$Arr.Region.Code=="AF1" | E(net)$Arr.Regi
 par(mfrow=c(1,2))
 plot(net_africa,vertex.color="orange",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Africa")
 plot(net_extra_africa,vertex.color="lightskyblue1",vertex.label.cex=.5,edge.arrow.size=.2,main="Tie: Extra Africa")
+
+#### Mini (Algeris (ALG) to AF3, EU2, ME1, NA1, AS4)
+#### Voli verso regioni diverse da AF1 e EU1 gestiti da più aeroporti africani
+#### Notare un solo aeroporto in EU2 (Siviglia (SVQ))
+net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
+E(net)$width<-2.0
+#V(net)$label<-NA
+V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
+V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
+V(net)$type[V(net)$Region.Code=="ME1"] <- 3 # Middle East
+V(net)$type[V(net)$Region.Code=="EU1"] <- 4 # Western Europe
+V(net)$type[V(net)$Region.Code=="EU2"] <- 5 # Eastern/Central Europe
+V(net)$type[V(net)$Region.Code=="NA1"] <- 6 # North America
+V(net)$type[V(net)$Region.Code=="AS4"] <- 7 # North East Asia
+V(net)$type
+colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
+V(net)$color<-colrs[V(net)$type]
+V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
+net_mini <- net - E(net)[E(net)$Arr.Region.Code=="AF1" | E(net)$Arr.Region.Code=="EU1"]
+plot(net_mini,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white", main="Voli verso regioni diverse da AF1 e EU1 gestiti da più aeroporti africani")
+legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
+
+#### Mini (notAF1)
+#### Soltanto un volo la cui origine o destinazione non sia in AF1 (BUD-VIE)
+net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
+E(net)$width<-2.0
+#V(net)$label<-NA
+V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
+V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
+V(net)$type[V(net)$Region.Code=="ME1"] <- 3 # Middle East
+V(net)$type[V(net)$Region.Code=="EU1"] <- 4 # Western Europe
+V(net)$type[V(net)$Region.Code=="EU2"] <- 5 # Eastern/Central Europe
+V(net)$type[V(net)$Region.Code=="NA1"] <- 6 # North America
+V(net)$type[V(net)$Region.Code=="AS4"] <- 7 # North East Asia
+V(net)$type
+colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
+V(net)$color<-colrs[V(net)$type]
+V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
+net_mini <- net - E(net)[E(net)$Dep.Region.Code=="AF1" | E(net)$Arr.Region.Code=="AF1"]
+plot(net_mini,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white", main="Soltanto un volo la cui origine o destinazione non sia in AF1 (BUD-VIE)")
+legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
+
+#### Mini (onlyAF1)
+#### Voli la cui origine e destinazione è AF1
+net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
+E(net)$width<-2.0
+#V(net)$label<-NA
+V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
+V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
+V(net)$type[V(net)$Region.Code=="ME1"] <- 3 # Middle East
+V(net)$type[V(net)$Region.Code=="EU1"] <- 4 # Western Europe
+V(net)$type[V(net)$Region.Code=="EU2"] <- 5 # Eastern/Central Europe
+V(net)$type[V(net)$Region.Code=="NA1"] <- 6 # North America
+V(net)$type[V(net)$Region.Code=="AS4"] <- 7 # North East Asia
+V(net)$type
+colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
+V(net)$color<-colrs[V(net)$type]
+V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
+net_mini <- net - E(net)[E(net)$Dep.Region.Code!="AF1" | E(net)$Arr.Region.Code!="AF1"]
+plot(net_mini,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white", main="Voli la cui origine e destinazione è AF1")
+legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
+
+#### Mini (notAlgeris)
+#### Voli la cui origine o destinazione non sia Algeris (ALG)
+net<-graph_from_data_frame(d=edges2020,vertices=nodes2020,directed=T)
+E(net)$width<-2.0
+#V(net)$label<-NA
+V(net)$type[V(net)$Region.Code=="AF1"] <- 1 # North Africa
+V(net)$type[V(net)$Region.Code=="AF3"] <- 2 # Central/Western Africa
+V(net)$type[V(net)$Region.Code=="ME1"] <- 3 # Middle East
+V(net)$type[V(net)$Region.Code=="EU1"] <- 4 # Western Europe
+V(net)$type[V(net)$Region.Code=="EU2"] <- 5 # Eastern/Central Europe
+V(net)$type[V(net)$Region.Code=="NA1"] <- 6 # North America
+V(net)$type[V(net)$Region.Code=="AS4"] <- 7 # North East Asia
+V(net)$type
+colrs<-c("orange","yellow","green","blue","sky blue","red","purple")
+V(net)$color<-colrs[V(net)$type]
+V(net)$size<-0.01*(log(V(net)$Seats.Total)^3+1)
+net_mini <- net - E(net)[E(net)$Dep.Airport.Name=="Algiers" | E(net)$Arr.Airport.Name=="Algiers"]
+plot(net_mini,edge.arrow.size=.2,edge.curved=0,vertex.label=V(net)$name,vertex.label.color="black",pt.bg=colrs,vertex.label.cex=.5,vertex.frame.color="white", main="Voli la cui origine o destinazione non sia Algeris (ALG)")
+legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","Western Europe","Eastern/Central Europe","North America","North East Asia"), pch=21,col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
 
 #############################################################################################################################################
 
