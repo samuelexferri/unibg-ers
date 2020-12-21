@@ -272,6 +272,9 @@ centr_betw(net, directed=T, normalized=T)
 mean_distance(net, directed=F) # Undirect
 mean_distance(net, directed=T) # Direct
 
+## Matrice di adiacenza
+as_adjacency_matrix(net)
+
 #############################################################################################################################################
 
 #########################
