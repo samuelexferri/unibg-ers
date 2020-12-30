@@ -248,21 +248,29 @@ plot(net, vertex.color=vcol, vertex.size=10, vertex.label.cex=.5, edge.curved=.1
 ####### PARTE 3 #######
 #######################
 
-## Gradi dei nodi
+# Centralità (degree, clossness, betweenness)
+# Centralizzazione (centr_...)
+
 # Degree centrality è il numero di connessioni dirette rispetto al potenziale numero di connessioni dirette, misura l'importanza di un vertice in base al numero di connessioni del vertice
-deg<-degree(net,mode="all")
-plot(net, vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2, vertex.color="lightskyblue1")
+deg<-degree(net, mode="all")
+plot(net, main="Degree centrality", vertex.size=deg/7.5, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2, vertex.color="lightskyblue1")
+# Distribuzione cumulativa
 deg.dist <- degree_distribution(net, cumulative=T, mode="all")
 plot(x=0:max(deg), y=1-deg.dist, pch=19, cex=1.2, col="lightskyblue1", xlab="Degree", ylab="Cumulative Frequency", type="s", lwd=5)
-# Centralità e centralizzazione
 degree(net, mode="in") # Si considerano solo i link che arrivano a uno scalo
 centr_degree(net, mode="in", normalized=T) # Centalizzazione considerando la "in degree"
+degree(net, mode="out") # Si considerano solo i link che arrivano a uno scalo
+centr_degree(net, mode="out", normalized=T) # Centalizzazione considerando la "out degree"
 
 # Closeness (centrality based on distance to others in the graph) - Inverse of the node’s average geodesic distance to others in the network
+clo<-closeness(net, mode="all", weights=NA)
+plot(net, main="Clossness centrality", vertex.size=clo*1500, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2, vertex.color="lightskyblue1")
 closeness(net, mode="all", weights=NA)
 centr_clo(net, mode="all", normalized=T)
 
 # Betweenness (centrality based on a broker position connecting others) - Number of geodesics that pass through the node or the edge
+btw<-betweenness(net, directed=T, weights=NA)
+plot(net, main="Betweenness centrality", vertex.size=btw/100, vertex.label=V(net)$name, vertex.label.cex=.6, edge.arrow.size=.2, vertex.color="lightskyblue1")
 betweenness(net, directed=T, weights=NA)
 edge_betweenness(net, directed=T, weights=NA)
 centr_betw(net, directed=T, normalized=T)
