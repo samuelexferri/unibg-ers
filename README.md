@@ -6,6 +6,8 @@
 
 Economics of Network and Service Industries project
 
+Network analysis of the airline Air Algerie (AH) using R
+
 ![alt text](https://img.shields.io/badge/Language-Italian-infomrmational?style=for-the-badge)
 
 ## Authors
