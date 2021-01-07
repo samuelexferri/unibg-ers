@@ -89,7 +89,6 @@ legend(x=-1.5, y=-1.1, c("North Africa","Central/Western Africa","Middle East","
 head(edges2020)
 hist(edges2020$Seats.Total,30, col=c("lightskyblue1"), xlab="Passeggeri totali", ylab="Numero di tratte", main="Istrogramma dei passeggeri totali per tratta") # Seats Total
 hist(edges2020$Frequency,30, col=c("lightskyblue1"), xlab="Numero di voli", ylab="Numero di tratte", main="Isogramma della frequenza dei voli") # Frequency Total
-hist(edges2020$Seats.Total/edges2020$Frequency,30, col=c("lightskyblue1"), xlab="Passeggeri medi", ylab="Numero di tratte", main="Istogramma dei passeggeri medi")
 mean(edges2020$Seats.Total) # Media 2511.198
 sd(edges2020$Seats.Total) # Standard Deviation 3513.872
 cut.off<-mean(edges2020$Seats.Total)
